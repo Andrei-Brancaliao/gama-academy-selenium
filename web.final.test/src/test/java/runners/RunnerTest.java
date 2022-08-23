@@ -16,6 +16,6 @@ import cucumber.api.SnippetType;
 		snippets = SnippetType.CAMELCASE
 		)
 
-public class runnerTest {
+public class RunnerTest {
 
 }
