@@ -8,12 +8,12 @@ import cucumber.api.SnippetType;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 		features = "classpath:Features"
-		,glue= {"stepdefinitions"}
-		,tags = {"@End2End"}
+		,glue= {"stepDefinitions"}
+		,tags = {"@Formulario"}
 		,plugin = {"pretty", "html:target/cucumber-reports"}
 		,monochrome = true,
-		dryRun = false,
-		snippets = SnippetType.CAMELCASE
+		snippets = SnippetType.CAMELCASE,
+		dryRun = false
 		)
 
 public class RunnerTest {
