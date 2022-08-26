@@ -107,6 +107,7 @@ public class FormSteps {
 		ConfirmacaoPage confirmPage = new ConfirmacaoPage(Hooks.getDriver());
 		confirmPage.verificacaoPrimeiraLinha();
 		confirmPage.validarColunaEsquerda();
+		confirmPage.validarColunaDireita();
 	}
 	
 }
