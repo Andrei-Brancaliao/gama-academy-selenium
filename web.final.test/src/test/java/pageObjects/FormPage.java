@@ -227,7 +227,5 @@ public class FormPage extends Utils{
 		jse.executeScript("arguments[0].style.visibility='hidden'", elementoParaOcultar2);
 	}
 
-	
-
 }
 
