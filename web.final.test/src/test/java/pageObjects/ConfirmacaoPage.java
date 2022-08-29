@@ -28,19 +28,24 @@ public class ConfirmacaoPage extends Utils{
 	
 	@FindBy (how = How.XPATH, using = "//html[1]/body[1]/div[4]/div[1]/div[1]/div[2]/div[1]/table[1]/thead[1]/tr[1]/th")
 	private List<WebElement> listaPrimeiraLinha;
-	
+
 	@FindBy (how = How.XPATH, using = "//html[1]/body[1]/div[4]/div[1]/div[1]/div[2]/div[1]/table[1]/tbody[1]/tr/td[1]")
 	private List<WebElement> listaColunaEsquerda;
 	
 	@FindBy (how = How.XPATH, using = "//html[1]/body[1]/div[4]/div[1]/div[1]/div[2]/div[1]/table[1]/tbody[1]/tr/td[2]")
 	private List<WebElement> listaColunaDireita;
 	
+
+
 	public void verificacaoPrimeiraLinha() {
 		esperarListaElementos(listaPrimeiraLinha);
 		assertTrue(listaPrimeiraLinha.get(0).getText().equals("Label"));
 		assertTrue(listaPrimeiraLinha.get(1).getText().equals("Values"));
 	}	
-	
+
+	@FindBy (how = How.XPATH, using = "//html[1]/body[1]/div[4]/div[1]/div[1]/div[2]/div[1]/table[1]/tbody[1]/tr/td[1]")
+	private List<WebElement> listaColunaEsquerda;
+
 	//lista criada com elementos internos existentes baseado no visual do formulario
 	List<String> listaFormularioEsquerda = Arrays.asList(
 			"Student Name",
@@ -54,7 +59,16 @@ public class ConfirmacaoPage extends Utils{
 			"Address",
 			"State and City"
 			);
+
+	public void validarColunaEsquerda() {
+		for(int i = 0; i < listaColunaEsquerda.size(); i++) {
+			assertTrue(listaColunaEsquerda.get(i).getText().equals(listaFormularioEsquerda.get(i)));
+		}
+	}
 	
+	@FindBy (how = How.XPATH, using = "//html[1]/body[1]/div[4]/div[1]/div[1]/div[2]/div[1]/table[1]/tbody[1]/tr/td[2]")
+	private List<WebElement> listaColunaDireita;
+
 	//criacao da coluna baseaso nos dados inciais - procurar forma de parametrizar isso com os dados inseridos inicialmente
 	List<String> listaFormularioDireita = Arrays.asList(
 			"Anndrei Farto da Silva",

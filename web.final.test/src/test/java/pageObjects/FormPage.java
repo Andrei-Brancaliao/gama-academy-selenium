@@ -94,7 +94,7 @@ public class FormPage extends Utils{
 	private WebElement bookStore;
 	
 	
-	//elementos que impedem a visualização completa da pagina - seja banner seja ad
+	//elementos que impedem a visualizaÃ§Ã£o completa da pagina - seja banner seja ad
 	@FindBy (how = How.ID, using = "fixedban")
 	private WebElement elementoParaOcultar;
 	
@@ -226,6 +226,5 @@ public class FormPage extends Utils{
 		jse.executeScript("arguments[0].style.visibility='hidden'", elementoParaOcultar);
 		jse.executeScript("arguments[0].style.visibility='hidden'", elementoParaOcultar2);
 	}
-
 }
 
