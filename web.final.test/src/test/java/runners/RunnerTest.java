@@ -9,7 +9,7 @@ import cucumber.api.SnippetType;
 @CucumberOptions(
 		features = "classpath:Features"
 		,glue= {"stepDefinitions"}
-		,tags = {"@Formulario"}
+		,tags = {"@Register"}
 		,plugin = {"pretty", "html:target/cucumber-reports"}
 		,monochrome = true,
 		snippets = SnippetType.CAMELCASE,
