@@ -21,4 +21,5 @@ Feature: Formulario
 
     Examples: 
       | primeiroNome | sobrenome      | email            | genero | numeroTelefone | dataNascimento | materiaLetra | materia |
-      | Anndrei      | Farto da Silva | andrei@gmail.com | female |     1957878806 | 07 07 1993   | m            | Maths    |
+      | Anndrei      | Farto da Silva | andrei@gmail.com | female |     1957878806 | 07 07 1993     | m            | Maths   |
+
